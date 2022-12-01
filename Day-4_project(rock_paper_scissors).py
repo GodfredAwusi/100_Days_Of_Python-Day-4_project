@@ -26,27 +26,38 @@ scissors = """"           _
 \\__ \\ (__| \\__ \\__ \\ (_) | |  \\__ \\
 |___/\\___|_|___/___/\\___/|_|  |___/
                                     """
+
+images = [rock, paper, scissors]
 print("\n")
 print("Welcome to the Rock Paper Scissors game!")
 user_choice = int(input("What is your choice? Type 0 for Rock, 1 for Paper or 2 for Scissors: "))
+print(images[user_choice])
 computer_choice = random.randint(0, 2)
+print(f"\nComputer chose\n{images[computer_choice]}")
 
 if user_choice == 0 :
     if computer_choice == 2:
-        print(f"{rock}\n\nComputer chose\n{scissors}\n\nYou Win")
+        print("\nYou Win")
     elif computer_choice == 1:
-        print(f"{rock}\n\nComputer chose\n{paper}\n\nYou Lose")
+        print("\nYou Lose")
+    else:
+        print("\nIt'aa draw")
 elif user_choice == 1:
     if computer_choice == 0:
-        print(f"{paper}\n\nComputer chose\n{rock}\n\nYou Win")
+        print("\nYou Win")
     elif computer_choice == 2:
-        print(f"{paper}\n\nComputer chose\n{scissors}\n\nYou Lose")
+        print("\nYou Lose")
+    else:
+        print("\nIt'aa draw")
 elif user_choice == 2:
     if computer_choice == 0:
-        print(f"{scissors}\n\nComputer chose\n{rock}\n\nYou Lose")
+        print("\nYou Lose")
     elif computer_choice == 1:
-        print(f"{scissors}\n\nComputer chose\n{paper}\n\nYou Win")
-    
+        print("\nYou Win")
+    else:
+        print("\nIt'aa draw")
+else:
+    print("You chose an invalid number, you lose")
 
 
 
